@@ -2,11 +2,17 @@ import { ArrowRight, Sparkle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import MailLink from "@/components/ui/mail-link";
+import { useAppSelector, useAppDispatch } from "@/store/hook";
+import { increment } from "@/store/slices/counter";
 
 import wolfIcon from '../public/icons/wolf.svg';
 import agentIcon from '../public/icons/agent.svg';
 
 export default function App() {
+
+  const count = useAppSelector((state) => state.count.value);
+  const dispatch = useAppDispatch();
+
   return (
     <section className="flex items-center justify-center">
       <div className="container">
@@ -16,7 +22,12 @@ export default function App() {
               href="#"
               className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full bg-muted px-4 py-2 text-sm"
             >
-              <Badge>Yeni Oyunlar Yakinda Sizlerle</Badge>
+              <Badge>Yeni Oyunlar Yakinda Sizlerle {count}</Badge>
+              <Button
+                onClick={() => dispatch(increment())}
+                variant="link" className="text-muted-foreground">
+                <span className="text-sm">Detaylar</span>
+              </Button>
               <ArrowRight className="inline size-4" />
             </a>
             <h1 className="my-4 mb-6 text-center text-3xl font-semibold lg:text-6xl">
