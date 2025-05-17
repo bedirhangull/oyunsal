@@ -23,8 +23,7 @@ export default function App() {
               Oyunsal Edremit Şubesine Hoşgeldiniz
             </h1>
             <p className="mx-auto mb-6 max-w-2xl text-center text-muted-foreground lg:text-xl">
-              We craft powerful websites to accelerate your startup&apos;s
-              growth.
+              Yeni oyunlar için bizi takip edin! Edremit şubemizde her hafta yeni oyunlar düzenlenmektedir. Oyunlarımızda yer almak için hemen kaydolun ve eğlenceli bir deneyim yaşayın!
             </p>
             <div className="flex flex-col justify-center gap-2 sm:flex-row">
               <Button size="lg" className="w-full gap-2 sm:w-auto lg:mt-10">
