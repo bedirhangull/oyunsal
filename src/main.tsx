@@ -8,6 +8,7 @@ import SpyGame from './pages/spy-game.tsx'
 import { store, persistor } from '@/store/store.ts'
 import { Provider } from 'react-redux'
 import { PersistGate } from 'redux-persist/integration/react';
+import GamerLibrary from './pages/gamer-library.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
             {/* Add game section */}
             <Route path="/games/werewolf" element={<WerewolfGame />} />
             <Route path="/games/spy" element={<SpyGame />} />
+            <Route path="/gamer-library" element={<GamerLibrary />} />
           </Routes>
         </BrowserRouter>
       </PersistGate>
